@@ -22,7 +22,7 @@
                             <!--                            <Premain-Class>com.coderead.agent.AgentMain</Premain-Class>-->
                             <!--                            <Premain-Class>com.sys.insertPilepublic.AgentMain</Premain-Class>-->
                             <!-- 需要打包的类的 -->
-                            <Premain-Class>com.sys.hadoop.mr.tq.MyTQ</Premain-Class>
+                            <Premain-Class>com.sys.hadoop.mr</Premain-Class>
                             <Can-Redefine-Classes>false</Can-Redefine-Classes>
                             <Can-Retransform-Classes>false</Can-Retransform-Classes>
                         </manifestEntries>
@@ -46,16 +46,16 @@
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
-<!--                    <include>**/*.xml</include>-->
+                    <include>**/*.xml</include>
                 </includes>
-                <filtering>true</filtering>
+                <filtering>false</filtering>
             </resource>
             <resource>
                 <directory>src/test/java</directory>
                 <includes>
-<!--                    <include>**/*.xml</include>-->
+                    <include>**/*.xml</include>
                 </includes>
-                <filtering>true</filtering>
+                <filtering>false</filtering>
             </resource>
         </resources>
     </build>

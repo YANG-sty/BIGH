@@ -22,15 +22,6 @@ public class MyTQ {
         job.setJarByClass(MyTQ.class);
 //        job.waitForCompletion(true);
 
-        Path input = new Path("/data/tq/input");
-        FileInputFormat.addInputPath(job,input);
-        Path output = new Path("/data/tq/output");
-        if (output.getFileSystem(configuration).exists(output)) {
-            output.getFileSystem(configuration).delete(output, true);
-        }
-        FileOutputFormat.setOutputPath(job, output);
-
-
 
 //        job.setInputFormatClass(ooo.class);
 
@@ -48,6 +39,14 @@ public class MyTQ {
 
 //        job.setCombinerClass(TReducer.class);
 //        job.setCombinerKeyGroupingComparatorClass(TGroupingComparator.class);
+
+        Path input = new Path("/data/tq/input");
+        FileInputFormat.addInputPath(job,input);
+        Path output = new Path("/data/tq/output");
+        if (output.getFileSystem(configuration).exists(output)) {
+            output.getFileSystem(configuration).delete(output, true);
+        }
+        FileOutputFormat.setOutputPath(job, output);
 
         job.waitForCompletion(true);
 
