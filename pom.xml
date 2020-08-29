@@ -38,6 +38,10 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>utf8</encoding>
+                    <compilerArguments>
+                        <!-- 打包本地jar包 -->
+                        <extdirs>${project.basedir}/lib</extdirs>
+                    </compilerArguments>
                 </configuration>
             </plugin>
         </plugins>
@@ -56,6 +60,13 @@
                     <include>**/*.xml</include>
                 </includes>
                 <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>lib</directory>
+                <targetPath>/lib/</targetPath>
+                <includes>
+                    <include>**/*.jar</include>
+                </includes>
             </resource>
         </resources>
     </build>
