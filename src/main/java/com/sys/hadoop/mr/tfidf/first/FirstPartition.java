@@ -1,4 +1,4 @@
-package com.sys.hadoop.mr.tfidf;
+package com.sys.hadoop.mr.tfidf.first;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
