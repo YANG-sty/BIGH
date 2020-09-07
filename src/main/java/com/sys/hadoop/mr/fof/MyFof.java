@@ -19,6 +19,12 @@ public class MyFof {
     public static void main(String[] args) throws Exception {
 
         Configuration configuration = new Configuration(true);
+        /*configuration.set("mapreduce.app-submission.corss-paltform", "true");
+        //如果分布式运行,必须打jar包
+        //且,client在集群外非hadoop jar 这种方式启动,client中必须配置jar的位置
+        configuration.set("mapreduce.framework.name", "local");
+        //这个配置,只属于,切换分布式到本地单进程模拟运行的配置
+        //这种方式不是分布式,所以不用打jar包*/
         Job job = Job.getInstance(configuration);
         job.setJarByClass(MyFof.class);
 
