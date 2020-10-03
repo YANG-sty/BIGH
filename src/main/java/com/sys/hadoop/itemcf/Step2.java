@@ -1,6 +1,5 @@
 package com.sys.hadoop.itemcf;
 
-import com.google.inject.internal.asm.$TypePath;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
