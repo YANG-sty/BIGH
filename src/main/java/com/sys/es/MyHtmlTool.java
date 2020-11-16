@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Create by yang_zzu on 2020/10/17 on 9:28
  */
-public class HtmlTool {
+public class MyHtmlTool {
 
     public String sanitizeHtml(String htmlContent) {
 
@@ -112,10 +112,12 @@ public class HtmlTool {
 //        document.outputSettings(new Document.OutputSettings().prettyPrint(false));
 
         //输出 html 的全部数据，没有格式，
-        /*String output = document.body().text();
-        System.out.println(output);*/
+        String output = document.body().text();
+        System.out.println(output);
 
 
+
+        System.err.println("=============================================================");
 
         //输出 HTML 的全部数据，有部分的格式
         Document.OutputSettings outputSettings = new Document.OutputSettings().prettyPrint(false);
